@@ -10,7 +10,7 @@
 
 
   /*---------------------------------------
-     TYPOGRAPHY              
+     TYPOGRAPHY
   -----------------------------------------*/
 
   h1,h2,h3,h4,h5,h6 {
@@ -50,7 +50,7 @@
 
 
   /*---------------------------------------
-     GENERAL               
+     GENERAL
   -----------------------------------------*/
 
   html{
@@ -111,9 +111,10 @@
     padding: 100px 0;
   }
 
-  #event, 
+  #event,
   #menu,
-  #testimonial {
+  #testimonial,
+  #team {
     text-align: center;
   }
 
@@ -121,7 +122,7 @@
   .team-thumb img {
     width: 100%;
   }
-  
+
   #google-map iframe {
     border: 0;
     width: 100%;
@@ -131,7 +132,7 @@
 
 
   /*---------------------------------------
-     BUTTONS               
+     BUTTONS
   -----------------------------------------*/
 
   .section-btn {
@@ -148,7 +149,7 @@
 
 
   /*---------------------------------------
-       PRE LOADER              
+       PRE LOADER
   -----------------------------------------*/
 
   .preloader {
@@ -198,16 +199,9 @@
 
 
   /*---------------------------------------
-      MENU              
+      MENU
   -----------------------------------------*/
 
- /* .navbar header{
-    display: inline-block;
-    float: left;
-    position: relative;
-    height: 50px;
- }
-*/
   .custom-navbar {
     border: none;
     margin-bottom: 0;
@@ -266,7 +260,6 @@
     padding-right: 22px;
     padding-left: 22px;
     text-transform: uppercase;
-    display: inline-block;
   }
 
   .custom-navbar .nav li a:hover {
@@ -301,7 +294,7 @@
   @media(min-width:768px) {
     .custom-navbar {
       border-bottom: 0;
-      background: 0 0; 
+      background: 0 0;
     }
 
     .custom-navbar.top-nav-collapse {
@@ -325,11 +318,10 @@
     }
   }
 
- 
 
 
   /*---------------------------------------
-      HOME              
+      HOME
   -----------------------------------------*/
 
   #home {
@@ -439,7 +431,7 @@
 
 
   /*---------------------------------------
-      ABOUT              
+      ABOUT
   -----------------------------------------*/
 
   #about {
@@ -461,7 +453,7 @@
 
 
   /*---------------------------------------
-      EVENT           
+      EVENT
   -----------------------------------------*/
 
   #event {
@@ -539,10 +531,92 @@
     margin-top: 5px;
   }
 
+  -----------------------------------------------------------------------------------------
+    /*---------------------------------------
+        TEAM
+    -----------------------------------------*/
+    #team {
+      background: #f9f9f9;
+    }
+    .team-thumb {
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .team-info {
+      padding: 10px 30px 20px 30px;
+    }
+
+    .team-thumb .event-hover {
+      position: absolute;
+      background: #1c1c1c;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(100%);
+      transition: 0.5s 0.2s;
+    }
+
+    .team-thumb:hover .event-hover {
+      opacity: 0.95;
+      transition-delay: 0.3s;
+      transform: translateY(0);
+    }
+
+    .team-thumb img {
+      transition: 0.5s 0.2s;
+    }
+
+    .team-thumb:hover img {
+      transform: scale(1.2);
+    }
+
+    .team-thumb .social-icon li a {
+      background: #292929;
+      border-radius: 100%;
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+      color: #d9d9d9;
+      font-size: 20px;
+      margin: 15px 5px 0 5px;
+    }
+
+    .team-thumb .event-item {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%,-50%);
+      -moz-transform: translate(-50%,-50%);
+      transform: translate(-50%,-50%);
+    }
+
+    .team-item h4 {
+      color: #ffffff;
+    }
+
+    .team-info p {
+      color: #bfbdbd;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-top: 5px;
+    }
+
+    
+
+-----------------------------------------------------------------------------------------------
 
 
   /*---------------------------------------
-     MENU              
+     MENU
   -----------------------------------------*/
 
   #menu {
@@ -639,7 +713,7 @@
 
 
   /*---------------------------------------
-      TESTIMONIAL             
+      TESTIMONIAL
   -----------------------------------------*/
 
   #testimonial {
@@ -695,7 +769,7 @@
 
 
   /*---------------------------------------
-      CONTACT             
+      CONTACT
   -----------------------------------------*/
 
   #contact .section-title {
@@ -745,13 +819,13 @@
 
 
   /*---------------------------------------
-     FOOTER              
+     FOOTER
   -----------------------------------------*/
 
   footer {
     border-top: 1px solid rgba(0,0,0,0.05);
     padding: 120px 0;
-    padding-bottom: 40px;
+    padding-bottom: 80px;
   }
 
   footer .section-title {
@@ -780,9 +854,49 @@
     margin-top: 20px;
   }
 
+  .footer-open-hour {
+    background: #ce3232;
+    background: url('../images/dsc/dscauce-logo.png') center center no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    margin-top: 0;
+    padding: 40px 0 40px 80px;
+    overflow: hidden;
+    position: relative;
+    z-index: 22;
+    right: 20px;
+    bottom: 20px;
+  }
+
+  .footer-open-hour::after {
+    /*background: rgba(29,29,29,0.85);*/
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2222;
+  }
+
+  .footer-open-hour h2 {
+    color: #ffffff;
+  }
+
+  .footer-open-hour p {
+    color: #d9d9d9;
+  }
+
+  .footer-open-hour strong {
+    color: #f9f9f9;
+  }
+
+
 
   /*---------------------------------------
-     SOCIAL ICON              
+     SOCIAL ICON
   -----------------------------------------*/
 
   .social-icon {
@@ -815,26 +929,10 @@
     color: #ffffff;
   }
 
- /*---------------------------------------
-     COPYRIGHT AREA         
-  -----------------------------------------*/
-  #copyright-area {
-    text-align: center;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    padding: 20px auto;
-    background-color: #f9f9f9;
-  }
-  #copyright-area p{
-    padding: 10px auto;
-    margin: 20px;
-  }
-
 
 
   /*---------------------------------------
-     RESPONSIVE STYLES              
+     RESPONSIVE STYLES
   -----------------------------------------*/
 
   @media screen and (max-width: 1170px) {
@@ -981,4 +1079,3 @@
       top: 60%;
     }
   }
-
